@@ -1,10 +1,8 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db'); 
-// const authRoutes = require('./routes/authRoutes');
 const cors = require('cors');
-const authRoutes =require('./routes/authRoutes')
-// const authRoutes
+const authRoutes = require('./routes/authRoutes');
 const eventRoutes = require('./routes/eventRoutes');
 const http = require('http');
 const { Server } = require('socket.io');
@@ -15,32 +13,27 @@ connectDB();
 
 const app = express();
 app.use(cors()); 
-
 app.use(express.json());
 
-app.use('/api/auth',authRoutes)
-// app.use('/api/auth', authRoutes);
+app.use('/api/auth', authRoutes);
 app.use('/api/events', eventRoutes);
 
-
-app.get('/', async (req,res)=>{
+app.get('/', async (req, res) => {
   try {
-       res.send('this is home route')
+    res.send('This is the home route');
   } catch (error) {
-      res.send('got error in the home route')
+    res.status(500).send('Got an error in the home route');
   }
-})
+});
 
 const PORT = process.env.PORT || 2100;
 
 const server = http.createServer(app);
 const io = new Server(server, {
-
   cors: {
-    origin: '*',
+    origin: 'http://localhost:5174', // Consider specifying allowed origins in production
   },
 });
-
 
 io.on('connection', (socket) => {
   console.log('User connected');
@@ -57,10 +50,3 @@ io.on('connection', (socket) => {
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-
-
-
-
-
-
-
