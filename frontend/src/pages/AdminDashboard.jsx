@@ -28,7 +28,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const checkAdminStatus = async () => {
       try {
-        const response = await axios.get('https://event-management-ngu0.onrender.com/api/auth/check-admin', {
+        const response = await axios.get('https://event-planner-cxfc.onrender.com/api/auth/check-admin', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -45,7 +45,7 @@ const AdminDashboard = () => {
   const requestAdminAccess = async () => {
     try {
       const response = await axios.post(
-        'https://event-management-ngu0.onrender.com/api/auth/request-admin-access',
+        'https://event-planner-cxfc.onrender.com/api/auth/request-admin-access',
         {},
         {
           headers: {

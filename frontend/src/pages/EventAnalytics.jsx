@@ -8,7 +8,7 @@ const EventAnalytics = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const response = await axios.get('https://event-management-ngu0.onrender.com/api/events/stats', {
+        const response = await axios.get('https://event-planner-cxfc.onrender.com/api/events/stats', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },

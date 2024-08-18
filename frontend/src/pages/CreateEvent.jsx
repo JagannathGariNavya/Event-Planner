@@ -15,7 +15,7 @@ const CreateEvent = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        'https://event-management-ngu0.onrender.com/api/events',
+        'https://event-planner-cxfc.onrender.com/api/events',
         {
           name,
           date,

@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const { data } = await axios.post('https://event-management-ngu0.onrender.com/api/auth/login', {
+      const { data } = await axios.post('https://event-planner-cxfc.onrender.com/api/auth/login', {
         email,
         password,
       });

@@ -18,7 +18,7 @@ const UpdateEvent = () => {
   useEffect(() => {
     const fetchEvent = async () => {
       try {
-        const response = await axios.get(`https://event-management-ngu0.onrender.com/api/events/${id}`, {
+        const response = await axios.get(`https://event-planner-cxfc.onrender.com/api/events/${id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -40,7 +40,7 @@ const UpdateEvent = () => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`https://event-management-ngu0.onrender.com/api/events/${id}`, {
+      await axios.put(`https://event-planner-cxfc.onrender.com/api/events/${id}`, {
         name,
         date,
         time,

@@ -11,7 +11,7 @@ const EventList = () => {
   useEffect(() => {
     const fetchMyEvents = async () => {
       try {
-        const response = await axios.get('https://event-management-ngu0.onrender.com/api/events/my-events', {
+        const response = await axios.get('https://event-planner-cxfc.onrender.com/api/events/my-events', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -27,7 +27,7 @@ const EventList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://event-management-ngu0.onrender.com/api/events/${id}`, {
+      await axios.delete(`https://event-planner-cxfc.onrender.com/api/events/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },

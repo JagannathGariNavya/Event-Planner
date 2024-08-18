@@ -12,7 +12,7 @@ const EventDetails = () => {
   useEffect(() => {
     const fetchEvent = async () => {
       try {
-        const response = await axios.get(`https://event-management-ngu0.onrender.com/api/events/${id}`);
+        const response = await axios.get(`https://event-planner-cxfc.onrender.com/api/events/${id}`);
         setEvent(response.data);
       } catch (error) {
         console.error('Error fetching event:', error);
@@ -38,7 +38,7 @@ const EventDetails = () => {
     }
 
     try {
-      const response = await axios.post(`https://event-management-ngu0.onrender.com/api/events/${id}/register`, {}, {
+      const response = await axios.post(`https://event-planner-cxfc.onrender.com/api/events/${id}/register`, {}, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

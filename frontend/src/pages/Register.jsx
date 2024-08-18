@@ -12,7 +12,7 @@ const Register = () => {
 
   const handleSignup = async () => {
     try {
-      await axios.post('https://event-management-ngu0.onrender.com/api/auth/register', {
+      await axios.post('https://event-planner-cxfc.onrender.com/api/auth/register', {
         email,
         password,
         name,

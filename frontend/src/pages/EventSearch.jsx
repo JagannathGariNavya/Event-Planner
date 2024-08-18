@@ -11,7 +11,7 @@ const EventSearch = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://event-management-ngu0.onrender.com/api/events');
+        const response = await axios.get('https://event-planner-cxfc.onrender.com/api/events');
         setEvents(response.data);
       } catch (error) {
         setError('Error fetching data');
