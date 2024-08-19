@@ -26,7 +26,7 @@ app.get('/', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 2100;
+const PORT = process.env.PORT || 8000;
 
 const server = http.createServer(app);
 const io = new Server(server, {
@@ -49,4 +49,8 @@ io.on('connection', (socket) => {
 
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+
 });
+
+
+
