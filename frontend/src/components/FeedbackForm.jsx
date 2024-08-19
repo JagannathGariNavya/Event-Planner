@@ -15,15 +15,15 @@ const FeedbackForm = ({ eventId }) => {
     setError(null);
     setSuccess(null);
 
-    try {
-      await axios.post(`http://localhost:8080/api/events/${eventId}/feedback`, { feedback, rating }, { withCredentials: true });
-      setSuccess('Thank you for your feedback!');
-      setFeedback('');
-    } catch (err) {
-      setError('Thank you for your feedback!');
-    } finally {
-      setIsSubmitting(true);
-    }
+    // try {
+    //   await axios.post(`http://localhost:8080/api/events/${eventId}/feedback`, { feedback, rating }, { withCredentials: true });
+    //   setSuccess('Thank you for your feedback!');
+    //   setFeedback('');
+    // } catch (err) {
+    //   setError('Thank you for your feedback!');
+    // } finally {
+    //   setIsSubmitting(true);
+    // }
   };
 
   return (
